@@ -1,5 +1,5 @@
 import React from "react";
-import { hero, section } from "../layouts/styles";
+import { hero } from "../layouts/styles";
 import site from "../content/site.yaml";
 
 const base = import.meta.env.BASE_URL;
