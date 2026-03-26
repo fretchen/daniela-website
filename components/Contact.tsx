@@ -1,5 +1,6 @@
 import React from "react";
 import { contact, section } from "../layouts/styles";
+import site from "../content/site.yaml";
 
 export default function Contact() {
   return (
@@ -7,14 +8,10 @@ export default function Contact() {
       <div className={section.wrapper}>
         <h2 className={section.heading}>Get in Touch</h2>
         <div className={contact.container}>
-          <p className={contact.text}>
-            Interested in learning Spanish? Send me a message to discuss your
-            goals and schedule a first lesson. I&apos;ll be happy to answer any
-            questions!
-          </p>
+          <p className={contact.text}>{site.contact.intro}</p>
           <div className={contact.buttons}>
             <a
-              href="https://wa.me/18091234567"
+              href={`https://wa.me/${site.contact.whatsapp}`}
               target="_blank"
               rel="noopener noreferrer"
               className={contact.whatsapp}
@@ -22,14 +19,14 @@ export default function Contact() {
               💬 WhatsApp
             </a>
             <a
-              href="mailto:teacher@example.com"
+              href={`mailto:${site.contact.email}`}
               className={contact.email}
             >
               ✉️ Email
             </a>
           </div>
           <p className={contact.location}>
-            📍 Las Terrenas, Samaná, Dominican Republic
+            📍 {site.contact.location}
           </p>
         </div>
       </div>

@@ -1,0 +1,41 @@
+name: "[Teacher Name]"
+tagline: "Spanish lessons in Las Terrenas, Dominican Republic. Private, group, and online classes for all levels."
+cta: "Get in touch"
+heroImage: "images/victor-rosario-leElu-nPGxU-unsplash.jpg"
+heroImageAlt: "Las Terrenas beach, Dominican Republic"
+
+nav:
+  - label: "About"
+    href: "#about"
+  - label: "Classes"
+    href: "#classes"
+  - label: "Testimonials"
+    href: "#testimonials"
+  - label: "Contact"
+    href: "#contact"
+
+contact:
+  whatsapp: "18091234567"
+  email: "teacher@example.com"
+  location: "Las Terrenas, Samaná, Dominican Republic"
+  intro: "Interested in learning Spanish? Send me a message to discuss your goals and schedule a first lesson. I'll be happy to answer any questions!"
+
+about:
+  title: "About Me"
+  paragraphs:
+    - "I'm a passionate Spanish teacher based in the beautiful town of Las Terrenas on the Samaná peninsula. With years of teaching experience, I help expats, travelers, and residents learn Spanish in a fun and effective way."
+    - "Whether you're a complete beginner or looking to refine your fluency, I tailor every lesson to your goals, pace, and interests. My classes combine conversation practice, grammar, and real-life situations you'll encounter in the Dominican Republic."
+  highlights:
+    - value: "5+"
+      label: "Years teaching"
+    - value: "A1–C2"
+      label: "All levels"
+    - value: "🇪🇸🇫🇷🇬🇧"
+      label: "Multilingual"
+
+seo:
+  title: "Spanish Lessons in Las Terrenas | [Teacher Name]"
+  description: "Private and group Spanish lessons in Las Terrenas, Dominican Republic. All levels A1–C2. In-person and online."
+  ogTitle: "Spanish Lessons in Las Terrenas"
+  ogDescription: "Private and group Spanish lessons in Las Terrenas, Dominican Republic. All levels from A1 to C2."
+  canonical: "https://www.fretchen.eu/daniela-website/"
