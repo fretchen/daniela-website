@@ -1,11 +1,13 @@
 import React from "react";
 import { hero, section } from "../layouts/styles";
 
+const base = import.meta.env.BASE_URL;
+
 export default function Hero() {
   return (
     <div className={hero.banner}>
       <img
-        src="/images/victor-rosario-leElu-nPGxU-unsplash.jpg"
+        src={`${base}images/victor-rosario-leElu-nPGxU-unsplash.jpg`}
         alt="Las Terrenas beach, Dominican Republic"
         className={hero.bannerImage}
       />
