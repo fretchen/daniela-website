@@ -1,24 +1,18 @@
-import React from "react";
+import rawSite from "../content/site.yaml";
+import type { SiteContent } from "../content/types";
+
+const site = rawSite as SiteContent;
 
 export default function HeadDefault() {
   return (
     <>
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta
-        name="description"
-        content="Private and group Spanish lessons in Las Terrenas, Dominican Republic. All levels from A1 to C2. In-person and online classes available."
-      />
-      <meta
-        property="og:title"
-        content="Spanish Lessons in Las Terrenas"
-      />
-      <meta
-        property="og:description"
-        content="Private and group Spanish lessons in Las Terrenas, Dominican Republic. All levels from A1 to C2."
-      />
+      <meta name="description" content={site.seo.description} />
+      <meta property="og:title" content={site.seo.ogTitle} />
+      <meta property="og:description" content={site.seo.ogDescription} />
       <meta property="og:type" content="website" />
-      <link rel="canonical" href="https://fredjendrzejewski.github.io/daniela-website/" />
+      <link rel="canonical" href={site.seo.canonical} />
     </>
   );
 }

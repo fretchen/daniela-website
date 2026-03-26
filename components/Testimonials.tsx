@@ -1,23 +1,8 @@
-import React from "react";
 import { testimonials, section } from "../layouts/styles";
+import rawQuotes from "../content/testimonials.yaml";
+import type { Testimonial } from "../content/types";
 
-const quotes = [
-  {
-    text: "I started with zero Spanish and after a few months of lessons I can hold real conversations. The classes are fun, practical, and perfectly adapted to my level.",
-    author: "[Student Name]",
-    origin: "France",
-  },
-  {
-    text: "The best part is how the lessons focus on situations I actually encounter in daily life here in Las Terrenas. I feel so much more confident now.",
-    author: "[Student Name]",
-    origin: "United States",
-  },
-  {
-    text: "Patient, encouraging, and well-prepared. Every lesson is structured but flexible enough to go where the conversation takes us. Highly recommended!",
-    author: "[Student Name]",
-    origin: "Canada",
-  },
-];
+const quotes = rawQuotes as Testimonial[];
 
 export default function Testimonials() {
   return (

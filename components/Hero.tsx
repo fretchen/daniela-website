@@ -1,5 +1,8 @@
-import React from "react";
-import { hero, section } from "../layouts/styles";
+import { hero } from "../layouts/styles";
+import rawSite from "../content/site.yaml";
+import type { SiteContent } from "../content/types";
+
+const site = rawSite as SiteContent;
 
 const base = import.meta.env.BASE_URL;
 
@@ -7,19 +10,16 @@ export default function Hero() {
   return (
     <div className={hero.banner}>
       <img
-        src={`${base}images/victor-rosario-leElu-nPGxU-unsplash.jpg`}
-        alt="Las Terrenas beach, Dominican Republic"
+        src={`${base}${site.heroImage}`}
+        alt={site.heroImageAlt}
         className={hero.bannerImage}
       />
       <div className={hero.overlay} />
       <div className={hero.container}>
-        <h1 className={hero.title}>[Teacher Name]</h1>
-        <p className={hero.subtitle}>
-          Spanish lessons in Las Terrenas, Dominican Republic. Private, group,
-          and online classes for all levels.
-        </p>
+        <h1 className={hero.title}>{site.name}</h1>
+        <p className={hero.subtitle}>{site.tagline}</p>
         <a href="#contact" className={hero.cta}>
-          Get in touch
+          {site.cta}
         </a>
       </div>
     </div>

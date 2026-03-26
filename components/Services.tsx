@@ -1,29 +1,8 @@
-import React from "react";
 import { services, section } from "../layouts/styles";
+import rawLessons from "../content/services.yaml";
+import type { Lesson } from "../content/types";
 
-const lessons = [
-  {
-    icon: "👤",
-    title: "Private Lessons",
-    description:
-      "One-on-one sessions tailored to your level and goals. Learn at your own pace with personalized attention and flexible scheduling.",
-    levels: "A1 – C2",
-  },
-  {
-    icon: "👥",
-    title: "Group Lessons",
-    description:
-      "Learn with others in small groups of 2–5 students. A fun and social way to practice conversation and build confidence.",
-    levels: "A1 – B2",
-  },
-  {
-    icon: "💻",
-    title: "Online Lessons",
-    description:
-      "Study from anywhere with live video sessions. Perfect for those who prefer learning from home or are not yet in Las Terrenas.",
-    levels: "A1 – C2",
-  },
-];
+const lessons = rawLessons as Lesson[];
 
 export default function Services() {
   return (

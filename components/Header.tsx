@@ -1,25 +1,21 @@
-import React from "react";
 import { layout } from "../layouts/styles";
+import rawSite from "../content/site.yaml";
+import type { SiteContent } from "../content/types";
+
+const site = rawSite as SiteContent;
 
 export default function Header() {
   return (
     <header className={layout.appbar}>
       <a href="#" className={layout.siteName}>
-        [Teacher Name]
+        {site.name}
       </a>
       <nav className={layout.navLinks}>
-        <a href="#about" className={layout.navLink}>
-          About
-        </a>
-        <a href="#classes" className={layout.navLink}>
-          Classes
-        </a>
-        <a href="#testimonials" className={layout.navLink}>
-          Testimonials
-        </a>
-        <a href="#contact" className={layout.navLink}>
-          Contact
-        </a>
+        {site.nav.map((item) => (
+          <a key={item.href} href={item.href} className={layout.navLink}>
+            {item.label}
+          </a>
+        ))}
       </nav>
     </header>
   );
