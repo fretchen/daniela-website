@@ -1,6 +1,8 @@
-import React from "react";
 import { services, section } from "../layouts/styles";
-import lessons from "../content/services.yaml";
+import rawLessons from "../content/services.yaml";
+import type { Lesson } from "../content/types";
+
+const lessons = rawLessons as Lesson[];
 
 export default function Services() {
   return (
@@ -8,7 +10,7 @@ export default function Services() {
       <div className={section.wrapper}>
         <h2 className={section.heading}>Classes</h2>
         <div className={services.grid}>
-          {lessons.map((lesson: { icon: string; title: string; description: string; levels: string }) => (
+          {lessons.map((lesson) => (
             <div key={lesson.title} className={services.card}>
               <span className={services.icon}>{lesson.icon}</span>
               <h3 className={services.cardTitle}>{lesson.title}</h3>

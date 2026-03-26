@@ -1,6 +1,8 @@
-import React from "react";
 import { testimonials, section } from "../layouts/styles";
-import quotes from "../content/testimonials.yaml";
+import rawQuotes from "../content/testimonials.yaml";
+import type { Testimonial } from "../content/types";
+
+const quotes = rawQuotes as Testimonial[];
 
 export default function Testimonials() {
   return (
@@ -8,7 +10,7 @@ export default function Testimonials() {
       <div className={section.wrapper}>
         <h2 className={section.heading}>What Students Say</h2>
         <div className={testimonials.grid}>
-          {quotes.map((q: { text: string; author: string; origin: string }, i: number) => (
+          {quotes.map((q, i) => (
             <div key={i} className={testimonials.card}>
               <span className={testimonials.quoteMark}>&ldquo;</span>
               <p className={testimonials.quote}>{q.text}</p>

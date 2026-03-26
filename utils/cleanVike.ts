@@ -39,6 +39,12 @@ if (fs.existsSync(assetsFile)) {
 }
 
 // Copy client files to build root
+if (!fs.existsSync(clientDirectory)) {
+  console.error(
+    `cleanVike: expected "${clientDirectory}" not found. Skipping client copy.`,
+  );
+  process.exit(1);
+}
 copyRecursive(clientDirectory, buildDir);
 
 // Remove the now-empty client directory

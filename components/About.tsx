@@ -1,6 +1,8 @@
-import React from "react";
 import { about, section } from "../layouts/styles";
-import site from "../content/site.yaml";
+import rawSite from "../content/site.yaml";
+import type { SiteContent } from "../content/types";
+
+const site = rawSite as SiteContent;
 
 export default function About() {
   return (
@@ -10,11 +12,11 @@ export default function About() {
         <div className={about.content}>
           <div className={about.photoPlaceholder}>📷</div>
           <div className={about.text}>
-            {site.about.paragraphs.map((p: string, i: number) => (
+            {site.about.paragraphs.map((p, i) => (
               <p key={i}>{p}</p>
             ))}
             <div className={about.highlight}>
-              {site.about.highlights.map((h: { value: string; label: string }, i: number) => (
+              {site.about.highlights.map((h, i) => (
                 <div key={i} className={about.highlightItem}>
                   <span className={about.highlightNumber}>{h.value}</span>
                   <span className={about.highlightLabel}>{h.label}</span>

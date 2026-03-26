@@ -1,6 +1,8 @@
-import React from "react";
 import { layout } from "../layouts/styles";
-import site from "../content/site.yaml";
+import rawSite from "../content/site.yaml";
+import type { SiteContent } from "../content/types";
+
+const site = rawSite as SiteContent;
 
 export default function Header() {
   return (
@@ -9,7 +11,7 @@ export default function Header() {
         {site.name}
       </a>
       <nav className={layout.navLinks}>
-        {site.nav.map((item: { label: string; href: string }) => (
+        {site.nav.map((item) => (
           <a key={item.href} href={item.href} className={layout.navLink}>
             {item.label}
           </a>

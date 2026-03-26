@@ -1,5 +1,4 @@
 import "./panda.css";
-import React from "react";
 import { layout } from "./styles";
 
 export default function LayoutDefault({

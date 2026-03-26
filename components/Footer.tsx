@@ -1,6 +1,8 @@
-import React from "react";
 import { footer } from "../layouts/styles";
-import site from "../content/site.yaml";
+import rawSite from "../content/site.yaml";
+import type { SiteContent } from "../content/types";
+
+const site = rawSite as SiteContent;
 
 export default function Footer() {
   return (
